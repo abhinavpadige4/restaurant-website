@@ -57,6 +57,12 @@ header h1 {
     margin-bottom: var(--spacing-sm);
 }
 
+.tagline {
+    font-style: italic;
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
 nav ul {
     display: flex;
     justify-content: center;
@@ -75,6 +81,42 @@ nav a {
 
 nav a:hover {
     background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #8B4513, #A0522D);
+    color: var(--light-text);
+    text-align: center;
+    padding: var(--spacing-xl) 0;
+}
+
+.hero h2 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-md);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: var(--spacing-lg);
+    opacity: 0.9;
+}
+
+.btn-primary {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--light-text);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: var(--radius-md);
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-color);
+    transform: translateY(-2px);
 }
 
 /* Menu Section Styles */
@@ -185,6 +227,13 @@ nav a:hover {
     border-bottom: none;
 }
 
+.hours-note {
+    text-align: center;
+    margin-top: var(--spacing-sm);
+    font-style: italic;
+    color: #666;
+}
+
 /* Contact Section Styles */
 .contact-section {
     padding: var(--spacing-xl) 0;
@@ -197,6 +246,13 @@ nav a:hover {
     text-align: center;
     margin-bottom: var(--spacing-lg);
     color: var(--primary-color);
+}
+
+.contact-section p.contact-info {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+    font-size: 1.1rem;
+    color: #666;
 }
 
 .contact-form {
@@ -261,6 +317,17 @@ nav a:hover {
     transform: scale(0.98);
 }
 
+.contact-details {
+    margin-top: var(--spacing-lg);
+    text-align: center;
+}
+
+.contact-details h3 {
+    font-family: var(--font-heading);
+    color: var(--primary-color);
+    margin-bottom: var(--spacing-sm);
+}
+
 /* Footer Styles */
 footer {
     background-color: var(--primary-color);
@@ -270,4 +337,152 @@ footer {
     font-size: 0.9rem;
 }
 
-/* Responsive Design will be added in S8 */
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.social-links a {
+    color: var(--light-text);
+    text-decoration: none;
+    margin: 0 var(--spacing-xs);
+    transition: opacity 0.3s ease;
+}
+
+.social-links a:hover {
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .container {
+        width: 95%;
+        padding: 0 var(--spacing-sm);
+    }
+    
+    header h1 {
+        font-size: 2rem;
+    }
+    
+    .tagline {
+        font-size: 1rem;
+    }
+    
+    .hero h2 {
+        font-size: 2rem;
+    }
+    
+    .hero p {
+        font-size: 1.1rem;
+    }
+    
+    .menu-section h2,
+    .hours-section h2,
+    .contact-section h2 {
+        font-size: 1.75rem;
+    }
+    
+    .menu-category h3 {
+        font-size: 1.25rem;
+    }
+    
+    .menu-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-xs);
+    }
+    
+    .menu-item-name {
+        width: 100%;
+        margin-bottom: var(--spacing-xs);
+    }
+    
+    .menu-item-description {
+        width: 100%;
+        margin: 0;
+    }
+    
+    .menu-item-price {
+        align-self: flex-end;
+        width: 100%;
+        text-align: left;
+    }
+    
+    .contact-form {
+        padding: var(--spacing-md);
+    }
+}
+
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.75rem;
+    }
+    
+    .tagline {
+        font-size: 0.9rem;
+    }
+    
+    .hero h2 {
+        font-size: 1.75rem;
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
+    
+    .menu-section h2,
+    .hours-section h2,
+    .contact-section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .hours-table {
+        font-size: 0.9rem;
+    }
+    
+    .hours-table th,
+    .hours-table td {
+        padding: var(--spacing-xs);
+    }
+    
+    .contact-details {
+        font-size: 0.9rem;
+    }
+    
+    .social-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .social-links a {
+        margin: var(--spacing-xs);
+    }
+}
+
+/* Accessibility Enhancements */
+:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+
+nav a:focus-visible,
+.submit-btn:focus-visible {
+    outline: 3px solid var(--secondary-color);
+    outline-offset: 2px;
+}
+
+/* Ensure sufficient color contrast */
+.menu-item-name {
+    color: var(--text-color);
+}
+
+.menu-item-description {
+    color: #555; /* Darker for better contrast */
+}
+
+.hours-table th,
+.hours-table td {
+    color: var(--text-color);
+}
