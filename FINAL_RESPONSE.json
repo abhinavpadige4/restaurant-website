@@ -1,0 +1,17 @@
+{
+  "type": "project",
+  "title": "Restaurant Website Deployment Fix",
+  "repo_url": "https://github.com/abhinavpadige4/restaurant-website",
+  "deploy_url": "https://restaurant-website-75p6xp82u-abhinavpadiges-projects.vercel.app",
+  "files_created": [
+    {
+      "name": "vercel.json",
+      "description": "Updated Vercel configuration for static site serving"
+    },
+    {
+      "name": "DEPLOYMENT_SUMMARY.md",
+      "description": "Summary of the deployment fix and verification"
+    }
+  ],
+  "concepts_covered": ["Vercel static site deployment", "vercel.json configuration", "framework detection override"]
+}
