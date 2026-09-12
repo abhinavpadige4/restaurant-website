@@ -3,15 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Name - Fine Dining Experience</title>
+    <title>The Golden Spoon - Fine Dining Experience</title>
     <meta name="description" content="Authentic restaurant serving exquisite cuisine in a warm, welcoming atmosphere. View our menu, hours, and make reservations.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <!-- JSON-LD Structured Data for Local Business -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "The Golden Spoon",
+      "image": [
+        "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwyNzY2Nzl8MHwxfHNlYXJjaHwxfHxydWVzdGFyYW58fHx8MHx8fHwxNjY5NzY2NjY0&ixlib=rb-1.2.1&q=80&w=400"
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Culinary Street",
+        "addressLocality": "Gastronomy City",
+        "postalCode": "12345",
+        "addressCountry": "US"
+      },
+      "telephone": "+1-555-123-4567",
+      "priceRange": "$$",
+      "servesCuisine": [
+        "American",
+        "Italian",
+        "French"
+      ],
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday"
+          ],
+          "opens": "08:00",
+          "closes": "22:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "09:00",
+          "closes": "23:00"
+        }
+      ],
+      "menu": "https://example.com/menu",
+      "hasMenu": "https://example.com/menu"
+    }
+    </script>
 </head>
 <body>
+    <!-- Header -->
     <header>
         <div class="container">
-            <h1>Restaurant Name</h1>
-            <nav>
+            <h1>The Golden Spoon</h1>
+            <p class="tagline">Where every meal is a celebration</p>
+            <nav aria-label="Main navigation">
                 <ul>
                     <li><a href="#menu">Menu</a></li>
                     <li><a href="#hours">Hours</a></li>
@@ -20,16 +75,169 @@
             </nav>
         </div>
     </header>
-    <main>
-        <!-- Menu section will go here -->
-        <!-- Hours section will go here -->
-        <!-- Contact section will go here -->
-    </main>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Experience Culinary Excellence</h2>
+            <p>Indulge in our carefully crafted dishes made with the finest ingredients</p>
+            <a href="#menu" class="btn-primary">View Our Menu</a>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <div class="container">
+            <h2>Our Menu</h2>
+            <div class="menu-grid">
+                <!-- Starters -->
+                <div class="menu-category">
+                    <h3>Starters</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <span class="menu-item-name">Bruschetta Trio</span>
+                            <span class="menu-item-description">Toasted bread with tomato-basil, mushroom-thyme, and olive tapenade</span>
+                            <span class="menu-item-price">$12</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Soup of the Day</span>
+                            <span class="menu-item-description">Chef's seasonal creation served with artisan bread</span>
+                            <span class="menu-item-price">$8</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Calamari Fritti</span>
+                            <span class="menu-item-description">Lightly fried squid with lemon aioli and marinara</span>
+                            <span class="menu-item-price">$14</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mains -->
+                <div class="menu-category">
+                    <h3>Main Courses</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <span class="menu-item-name">Pan-Seared Salmon</span>
+                            <span class="menu-item-description">Atlantic salmon with seasonal vegetables and lemon-dill sauce</span>
+                            <span class="menu-item-price">$28</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Herb-Crusted Rack of Lamb</span>
+                            <span class="menu-item-description">Rosemary and thyme crusted lamb with mint jelly reduction</span>
+                            <span class="menu-item-price">$32</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Wild Mushroom Risotto</span>
+                            <span class="menu-item-description">Arborio rice with wild mushrooms, parmesan, and white wine</span>
+                            <span class="menu-item-price">$24</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Filet Mignon</span>
+                            <span class="menu-item-description">8oz center-cut beef tenderloin with red wine reduction</span>
+                            <span class="menu-item-price">$36</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Desserts -->
+                <div class="menu-category">
+                    <h3>Desserts</h3>
+                    <div class="menu-items">
+                        <div class="menu-item">
+                            <span class="menu-item-name">Tiramisu</span>
+                            <span class="menu-item-description">Classic Italian dessert with espresso-soaked ladyfingers and mascarpone</span>
+                            <span class="menu-item-price">$10</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Chocolate Lava Cake</span>
+                            <span class="menu-item-description">Warm chocolate cake with molten center and vanilla bean ice cream</span>
+                            <span class="menu-item-price">$12</span>
+                        </div>
+                        <div class="menu-item">
+                            <span class="menu-item-name">Seasonal Fruit Tart</span>
+                            <span class="menu-item-description">Fresh berries and seasonal fruits in pastry cream</span>
+                            <span class="menu-item-price">$11</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hours Section -->
+    <section id="hours" class="hours-section">
+        <div class="container">
+            <h2>Opening Hours</h2>
+            <table class="hours-table">
+                <thead>
+                    <tr>
+                        <th>Day</th>
+                        <th>Hours</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Monday - Thursday</td>
+                        <td>8:00 AM - 10:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Friday - Saturday</td>
+                        <td>8:00 AM - 11:00 PM</td>
+                    </tr>
+                    <tr>
+                        <td>Sunday</td>
+                        <td>9:00 AM - 9:00 PM</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p class="hours-note">*We recommend making reservations for parties of 6 or more</p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p class="contact-info">Have questions or want to make a reservation? We'd love to hear from you!</p>
+            <form id="contactForm" aria-label="Contact form">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email" required aria-required="true">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" placeholder="How can we help you?" required aria-required="true"></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Send Message</button>
+            </form>
+            <div class="contact-details">
+                <h3>Visit Us</h3>
+                <p><strong>The Golden Spoon</strong><br>
+                   123 Culinary Street<br>
+                   Gastronomy City, 12345<br>
+                   <a href="tel:+1-555-123-4567">+1-555-123-4567</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <div class="container">
-            <p>&copy; 2024 Restaurant Name. All rights reserved.</p>
+            <div class="footer-content">
+                <p>&copy; 2024 The Golden Spoon. All rights reserved.</p>
+                <div class="social-links">
+                    <a href="#" aria-label="Facebook">Facebook</a> |
+                    <a href="#" aria-label="Instagram">Instagram</a> |
+                    <a href="#" aria-label="Twitter">Twitter</a>
+                </div>
+            </div>
         </div>
     </footer>
+
     <script src="js/script.js"></script>
 </body>
 </html>
